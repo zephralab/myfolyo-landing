@@ -165,6 +165,15 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* FAQ Accordion Styling */
+        .faq-item[open] summary svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 
@@ -371,6 +380,76 @@
         </div>
     </section>
 
+    <!-- How it Works Section -->
+    <section class="py-20 px-6 bg-white border-b border-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    How it <span class="text-accent">Works</span>
+                </h2>
+                <p class="text-xl text-gray-600">From scattered data to insights in 3 simple steps.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 relative mb-16">
+                <!-- Step 1 -->
+                <div class="relative z-10 text-center">
+                    <div
+                        class="w-16 h-16 bg-accent text-white rounded-xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg shadow-accent/20">
+                        1</div>
+                    <h3 class="font-display text-2xl font-bold mb-3">Import</h3>
+                    <p class="text-gray-600">Upload your Zerodha CSV or NSDL/CDSL CAS file directly.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 text-center">
+                    <div
+                        class="w-16 h-16 bg-accent text-white rounded-xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg shadow-accent/20">
+                        2</div>
+                    <h3 class="font-display text-2xl font-bold mb-3">Process</h3>
+                    <p class="text-gray-600">Our engine automatically parses transactions and calculates XIRR.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 text-center">
+                    <div
+                        class="w-16 h-16 bg-accent text-white rounded-xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg shadow-accent/20">
+                        3</div>
+                    <h3 class="font-display text-2xl font-bold mb-3">Analyze</h3>
+                    <p class="text-gray-600">Get a clear picture of your net worth, gains, and performance.</p>
+                </div>
+
+                <!-- Connecting lines (desktop only) -->
+                <div class="hidden md:block absolute top-8 left-1/4 right-1/4 h-0.5 bg-gray-100 -z-0"></div>
+            </div>
+
+            <!-- Trust / Security Badges -->
+            <div
+                class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.67-3.13 8.75-7 9.81-3.87-1.06-7-5.14-7-9.81V6.3l7-3.12zM12 7c-1.66 0-3 1.34-3 3 0 .73.27 1.39.71 1.91l-1.42 2.84c-.11.22 0 .49.22.6l.04.02c.22.11.49 0 .6-.22l1.32-2.64C10.87 12.86 11.41 13 12 13s1.13-.14 1.53-.49l1.32 2.64c.11.22.38.33.6.22l.04-.02c.22-.11.33-.38.22-.6l-1.42-2.84c.44-.52.71-1.18.71-1.91 0-1.66-1.34-3-3-3z" />
+                    </svg>
+                    <span class="font-bold text-sm uppercase tracking-wider">Bank-Grade Security</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V9h2v7zm4 0h-2V7h2v9z" />
+                    </svg>
+                    <span class="font-bold text-sm uppercase tracking-wider">Privacy Focused</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <span class="font-bold text-sm uppercase tracking-wider">DIY Investor First</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section class="py-20 px-6 bg-white">
         <div class="max-w-4xl mx-auto text-center">
@@ -464,6 +543,109 @@
                         <span class="font-semibold text-gray-400">₹21,240/year</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold mb-4">Why MyFolyo?</h2>
+                <p class="text-xl text-gray-600">The modern alternative to legacy tools.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl border border-gray-200 shadow-xl overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th class="py-6 px-8 text-lg font-display">Feature</th>
+                            <th class="py-6 px-8 text-lg font-display text-center">MyFolyo</th>
+                            <th class="py-6 px-8 text-lg font-display text-center opacity-50">mProfit</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr>
+                            <td class="py-4 px-8 font-medium">Annual Investment</td>
+                            <td class="py-4 px-8 text-center text-accent font-bold">₹599</td>
+                            <td class="py-4 px-8 text-center text-gray-400">₹21,240</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-8 font-medium">One-Click CSV Import</td>
+                            <td class="py-4 px-8 text-center text-accent">✅</td>
+                            <td class="py-4 px-8 text-center">Custom mapping needed</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-8 font-medium">XIRR Tracking</td>
+                            <td class="py-4 px-8 text-center text-accent">✅</td>
+                            <td class="py-4 px-8 text-center">✅</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-8 font-medium">Visual Dashboard</td>
+                            <td class="py-4 px-8 text-center text-accent font-bold">Modern Web</td>
+                            <td class="py-4 px-8 text-center text-gray-400">Desktop App</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-8 font-medium">Unlimited Portfolios</td>
+                            <td class="py-4 px-8 text-center text-accent">✅</td>
+                            <td class="py-4 px-8 text-center text-gray-400">Tiered pricing</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-6 bg-white border-t border-gray-100">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center">Frequently Asked <span
+                    class="text-accent">Questions</span></h2>
+
+            <div class="space-y-4">
+                <details class="faq-item group bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg list-none">
+                        Can I import my existing mProfit data?
+                        <svg class="w-5 h-5 text-accent transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                        Not in the initial launch. MyFolyo focuses on fresh starts using CAS files (mutual funds) and
+                        broker CSVs (stocks). If there's demand, we'll build a migration tool in a future update.
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg list-none">
+                        Does MyFolyo replace accounting software?
+                        <svg class="w-5 h-5 text-accent transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                        No. MyFolyo is pure portfolio tracking (stocks, mutual funds, XIRR, P&L). For full accounting
+                        (expenses, GST, tax), continue using Tally/Zoho Books.
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg list-none">
+                        Is my data stored securely?
+                        <svg class="w-5 h-5 text-accent transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed text-left">
+                        Yes. Bank-grade encryption, regular backups, AWS hosting. We never share your data.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
