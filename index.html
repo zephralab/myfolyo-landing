@@ -670,6 +670,7 @@
                 <form action="https://formspree.io/f/xpqqalll" method="POST" class="space-y-6">
                     <!-- Formspree Redirection -->
                     <input type="hidden" name="_next" value="success.html">
+                    <input type="text" name="_gotcha" class="hidden" style="display:none !important" tabindex="-1" autocomplete="off">
 
                     <div class="text-left">
                         <label for="email" class="block text-sm font-medium mb-2">Email Address *</label>
@@ -740,10 +741,8 @@
                     <p class="text-sm mb-2">
                         Built for DIY investors by a DIY investor
                     </p>
-                    <a href="/cdn-cgi/l/email-protection#d9b1bcb5b5b699b4a0bfb6b5a0b6f7b0b7"
-                        class="text-accent hover:text-accent/80 transition-colors">
-                        <span class="__cf_email__"
-                            data-cfemail="5139343d3d3e113c28373e3d283e7f383f">[email&#160;protected]</span>
+                    <a href="#" id="contact-email" class="text-accent hover:text-accent/80 transition-colors">
+                        Loading email...
                     </a>
                 </div>
             </div>
@@ -754,9 +753,19 @@
         </div>
     </footer>
 
-    <!-- Smooth scroll script -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- Smooth scroll and email protection script -->
     <script>
+        // Email obfuscation
+        (function() {
+            const user = "hello";
+            const domain = "myfolyo.in";
+            const email = user + "@" + domain;
+            const link = document.getElementById('contact-email');
+            if (link) {
+                link.href = 'mailto:' + email;
+                link.textContent = email;
+            }
+        })();
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
